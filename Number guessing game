@@ -1,0 +1,38 @@
+// number guessing game:
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main(){
+    const int MIN = 1;
+    const int MAX =100;
+    int guess;
+    int guesses;
+    int answer;
+    //use the current time as a seed
+    srand(time(0));
+    answer = (rand() % MAX) + MIN;//we need 100 values so mod 100..
+    do{
+        printf("enter a guess:\n");
+        scanf("%d",&guess);
+        if(guess>answer)
+        {
+            printf("guess is too high!\n");
+
+        }
+        else if(guess<answer)
+        {
+            printf("guess is too low!\n");
+        
+        }
+        else{
+            printf("guess is correct!!");
+        }
+        guesses++;
+    }while(guess!=answer);
+    printf("************\n");
+    printf("answer : %d\n",answer);
+    printf("guesses : %d\n",guesses);
+    printf("************");
+
+    return EXIT_SUCCESS;
+}
