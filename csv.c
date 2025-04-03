@@ -59,7 +59,7 @@ int main(int argc,char *argv[]){
 
     }
     for(int i=0;i<length;i++){
-        fprintf(out,"%s;%s;%d\n",drinks[i].name, drinks[i].packaging,drinks[i].price);
+        fprintf(out,"%s;%s;%d\n",drinks[i].name,drinks[i].packaging,drinks[i].price);
     }
     fclose(out);
     return EXIT_SUCCESS;
